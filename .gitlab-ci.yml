@@ -10,9 +10,9 @@ build:
   script: npm run build
 
 
-test: 
-  stage: test
-  script : npm test
+# test: 
+#   stage: test
+#   script : npm test
 
 
 production:
