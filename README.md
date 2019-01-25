@@ -5,6 +5,23 @@ Angular-PCF-Demo is a project to demonstrate Angular features and utilize *Gitla
 Angular project.
 
 
+Purpose of the project
+--------------------------
+An Angular 6 project on Gitlab needs CI configured using Gitlab Runner on Pivotal Cloud Foundry.
+
+Gitlab is an efficient repository manager that provides CI/CD pipeline features, hence I choose to push my source code to Gitlab and deploy the Runner on PCF.
+
+Gitlab Runner is a tool on which we run our pipelines.
+
+Architecture : Angular 6 + Gitlab Runner + PCF ( for CI ).
+
+Pre-requisite : 
+1. Git and Docker installed on your local system
+2. Gitlab account
+3. Docker Hub account
+4. PCF account
+
+
 The Angular Feature that has been demonstrated and tested here is Dependency Injection. 
 
 
@@ -26,12 +43,27 @@ Run the following command to run tests
 
 ` ng test`
 
+Remember to run prod build before you push to Cloud Foundry 
+
+
+`npm run build -prod`
+
 **Pipeline**
 ---------------------------------------------------------------------------------
 
 Gitlab's pipeline has been uitlized to run Build , Test and Deploy Jobs in 3 stages. 
 
 The pipeline utilizes Individual Runner that is hosted on Pivotal Cloud Foundry. 
+
+As you can see in the below image , I have two APPS running under one space (angular-pcf-demo) .
+
+angular-pcf-demo is where the whole application is deployed. 
+
+gitlabrunner-pcf is where the Gitlab runner is deployed and this is where the Pipeline runs.
+
+![Alt text](dist/img/pcf-ss.png?raw=true "Pivotal Cloud Foundary")
+
+
 
 If the above statement is confusing  I have created this documentation to  help you understand and work on it step by step
 
@@ -44,11 +76,13 @@ If the above statement is confusing  I have created this documentation to  help 
 If you dont want to setup the pipeline right now and would like to go live with the application quicly by hosting it on PCF , follow the simple CF commands below:
 
 
-Login to CF.
-Proviode your credentials.
-Provide your Endpoint name.
-Enter your SPACE as prompted my the CLI 
-Enter the cf push command
+* Login to CF.
+ `cf login `
+* Proviode your credentials as prompted.
+* Provide your Endpoint name.
+* Enter your SPACE as prompted my the CLI 
+* Enter the cf push command
+
 
 ` cf push app-name
 `
@@ -63,6 +97,28 @@ applications:
 ```
 
 
+
+
+
+
+Things to note:
+
+---------------------------------------------
+I am facing a techinical issue with the my PCF's Disk Quota. 
+Since this is a node application , when I build the app , node_modules file is created which is quite large in size.
+This tends to consume a lot of Disk Space and causes the rest of the pipeline steps to fail. 
+ The error is as below: 
+
+>  Fetching changes...
+> error: could not lock config file .git/config: Disk quota exceeded
+> ERROR: Job failed: exit status 1
+
+
+
+
+I am working on fixing this. 
+Will keep this file update and will mention how I resolved this issue. 
+Stay tuned !!
 
 
 
