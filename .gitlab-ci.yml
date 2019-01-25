@@ -16,7 +16,7 @@ test:
 
 
 production:
-  stage: deploy
+  stage: production
   script:
   - curl --location "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar zx
   - ./cf login -u debanjana.maitra@gmail.com -p Ttsp1.1PCF -a api.run.pivotal.io -s master
