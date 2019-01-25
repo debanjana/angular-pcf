@@ -34,7 +34,9 @@ Gitlab's pipeline has been uitlized to run Build , Test and Deploy Jobs in 3 sta
 The pipeline utilizes Individual Runner that is hosted on Pivotal Cloud Foundry. 
 
 As you can see in the below image , I have two APPS running under one space (angular-pcf-demo) .
+
 angular-pcf-demo is where the whole application is deployed. 
+
 gitlabrunner-pcf is where the Gitlab runner is deployed and this is where the Pipeline runs.
 
 ![Alt text](dist/img/pcf-ss.png?raw=true "Pivotal Cloud Foundary")
@@ -73,6 +75,22 @@ applications:
 ```
 
 
+
+Things to note:
+I am facing a techinical issue with the my PCF's Disk Quota. 
+Since this is a node application , when I build the app , node_modules file is created which is quite large in size.
+This tends to consume a lot of Disk Space and causes the rest of the pipeline steps to fail. 
+ The error is as below: 
+
+ Fetching changes...
+error: could not lock config file .git/config: Disk quota exceeded
+ERROR: Job failed: exit status 1
+
+
+
+I am working on fixing this. 
+Will keep this file update and will mention how I resolved this issue. 
+Stay tuned !!
 
 
 
