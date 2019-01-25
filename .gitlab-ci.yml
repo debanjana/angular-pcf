@@ -1,15 +1,20 @@
-image: java:8
+image: node
 
 stages:
   - build
+  - test
   - deploy
 
 build:
   stage: build
-  script: ./mvnw package
+  script: npm start
   artifacts:
     paths:
-      - target/demo-0.0.1-SNAPSHOT.jar
+      - dist/demo-0.0.1-SNAPSHOT.jar
+
+test: 
+  stage: test
+  script : npm test
 
 production:
   stage: deploy

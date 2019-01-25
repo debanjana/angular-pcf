@@ -1,0 +1,7 @@
+.header {
+    min-height: 40%;
+    background-image: url(../../../dist/img/banner.jpg);
+    text-align: center;
+    color: aliceblue;
+    font-size: 2rem;
+}

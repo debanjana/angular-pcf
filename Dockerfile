@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM node:8.11.2-alpine as node
 
 RUN export PATH=$PATH:/sbin && \
     apt-get update -y && \
