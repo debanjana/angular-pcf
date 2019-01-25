@@ -3,7 +3,7 @@ image: node
 stages:
   # - build
   # - test
-  - deploy
+  - production
 
 build:
   stage: build
