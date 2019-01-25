@@ -12,13 +12,11 @@ To Build and Run the project follow the simple steps mentioned below
 
 `
 git clone https://gitlab.com/debanjana.maitra/angular-pcf-demo.git
-
 `
 
 Once the project is on your local system , do the following to run the application 
 
 `npm install 
-
 npm start
 `
 
