@@ -55,11 +55,15 @@ Enter the cf push command
 
 Remember, you must have the manifest.yml file whose content should be like below:
 
-`applications:
+```
+applications:
 - name: angular-pcf-demo
   memory: 512M
   instances: 1
-`
+```
+
+
+
 
 
 
