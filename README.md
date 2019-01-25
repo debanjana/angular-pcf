@@ -43,7 +43,7 @@ Run the following command to run tests
 
 ` ng test`
 
-Remember to run prod build before you push to Cloud Foundry 
+Remember to run prod build before you push to Cloud Foundry so that all the required file are generated in your /dist folder
 
 
 `npm run build -prod`
