@@ -33,6 +33,14 @@ Gitlab's pipeline has been uitlized to run Build , Test and Deploy Jobs in 3 sta
 
 The pipeline utilizes Individual Runner that is hosted on Pivotal Cloud Foundry. 
 
+As you can see in the below image , I have two APPS running under one space (angular-pcf-demo) .
+angular-pcf-demo is where the whole application is deployed. 
+gitlabrunner-pcf is where the Gitlab runner is deployed and this is where the Pipeline runs.
+
+![Alt text](dist/img/pcf-ss.png?raw=true "Pivotal Cloud Foundary")
+
+
+
 If the above statement is confusing  I have created this documentation to  help you understand and work on it step by step
 
 [Configure CI for a Node/Java project in Cloud Foundry using Gitlab Runner](https://medium.com/@debanjanamaitra/configure-ci-for-a-node-java-project-in-pivotal-cloud-foundry-using-gitlab-runner-56c37f3a9aa6)
@@ -45,7 +53,8 @@ If you dont want to setup the pipeline right now and would like to go live with 
 
 
 Login to CF.
-Proviode your credentials.
+`cf login `
+Proviode your credentials as prompted.
 Provide your Endpoint name.
 Enter your SPACE as prompted my the CLI 
 Enter the cf push command
