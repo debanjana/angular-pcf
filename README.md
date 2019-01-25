@@ -5,6 +5,23 @@ Angular-PCF-Demo is a project to demonstrate Angular features and utilize *Gitla
 Angular project.
 
 
+Purpose of the project
+--------------------------
+An Angular 6 project on Gitlab needs CI configured using Gitlab Runner on Pivotal Cloud Foundry.
+
+Gitlab is an efficient repository manager that provides CI/CD pipeline features, hence I choose to push my source code to Gitlab and deploy the Runner on PCF.
+
+Gitlab Runner is a tool on which we run our pipelines.
+
+Architecture : Angular 6 + Gitlab Runner + PCF ( for CI ).
+
+Pre-requisite : 
+1. Git and Docker installed on your local system
+2. Gitlab account
+3. Docker Hub account
+4. PCF account
+
+
 The Angular Feature that has been demonstrated and tested here is Dependency Injection. 
 
 
