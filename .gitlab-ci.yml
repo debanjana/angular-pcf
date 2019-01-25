@@ -3,15 +3,6 @@ image: node
 stages:
   - deploy
 
-build:
-  stage: build
-  script: npm run build
-
-
-test: 
-  stage: test
-  script : npm test
-
 
 deploy:
   stage: deploy
