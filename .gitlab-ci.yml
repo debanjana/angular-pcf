@@ -1,8 +1,6 @@
 image: node
 
 stages:
-  # - build
-  # - test
   - deploy
 
 build:
