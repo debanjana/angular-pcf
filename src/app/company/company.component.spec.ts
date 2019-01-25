@@ -9,7 +9,7 @@ describe('CompanyComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CompanyComponent , CompanyListComponent],
+      declarations: [ CompanyComponent , CompanyListComponent], // remember to list the child component as well
     })
     
     fixture = TestBed.createComponent(CompanyComponent);

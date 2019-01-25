@@ -8,6 +8,8 @@ import { CompanyStockService } from '../services/company-stock.service';
 })
 export class CompanyListComponent implements OnInit {
   constructor(public companyStockService: CompanyStockService) { }
+  // here CompanyStockService is the service injected as dependency
+  
   stockData = [];
 
   ngOnInit() {

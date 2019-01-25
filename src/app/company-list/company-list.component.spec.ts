@@ -11,12 +11,12 @@ describe('CompanyListComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ CompanyListComponent ],
-      providers:[CompanyStockService]
+      providers:[CompanyStockService] // to list the dependency injected
     })
     fixture = TestBed.createComponent(CompanyListComponent);
     component = fixture.componentInstance;
 
-    teststockService = TestBed.get(CompanyStockService);
+    teststockService = TestBed.get(CompanyStockService); // use get() to inject the service 
   }));
 
   it('should create', () => {

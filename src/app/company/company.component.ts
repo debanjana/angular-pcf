@@ -1,3 +1,7 @@
+/* this is the main component that whose UI loads after being redirected from app.component.ts
+It has a Company list as child component
+*/
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +10,5 @@ import { Component } from '@angular/core';
   styleUrls: [ 'company.component.css' ]
 })
 export class CompanyComponent  {
-  name = 'Angular';
+  name = 'Company Stock';
 }

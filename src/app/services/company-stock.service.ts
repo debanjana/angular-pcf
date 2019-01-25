@@ -1,3 +1,9 @@
+/*
+This is the service.
+This has @injectable decorator because it will be injected to the Company List component
+This is the new way of Dependency Injection from Angular 6 onwards
+*/
+
 import { Injectable } from '@angular/core';
 import { getQueryValue } from '@angular/core/src/view/query';
 @Injectable({
@@ -21,7 +27,7 @@ import { getQueryValue } from '@angular/core/src/view/query';
         "currentPrice": 150,
         "change" : +0.13
     },
-    {"name" : "State farm",
+    {"name" : "State Farm",
         "currentPrice": 200,
         "change" : +8.74
     }

@@ -6340,7 +6340,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBhbnktbGlzdC9jb21wYW55LWxpc3QuY29tcG9uZW50LmNzcyJ9 */"
+module.exports = ".card-body {\n    background-color: beige;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcGFueS1saXN0L2NvbXBhbnktbGlzdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksd0JBQXdCO0NBQzNCIiwiZmlsZSI6InNyYy9hcHAvY29tcGFueS1saXN0L2NvbXBhbnktbGlzdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNhcmQtYm9keSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogYmVpZ2U7XG59Il19 */"
 
 /***/ }),
 
@@ -6351,7 +6351,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n    <div class=\"row\">\n      <div class=\"col-sm-6\" *ngFor=\"let stock of stockData\" >\n        <div class=\"card\">\n          <div class=\"card-body\">\n            <h5 class=\"card-title\">{{stock.name}}</h5>\n            <p class=\"card-text\">{{stock.currentPrice}}</p>\n            <p class=\"card-text\">{{stock.change}}</p>\n            <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n          </div>\n        </div>\n      </div>\n    </div>\n"
+module.exports = "\n    <div class=\"row\">\n      <div class=\"col-sm-6\" *ngFor=\"let stock of stockData\" >\n        <div class=\"card\">\n          <div class=\"card-body\">\n            <h5 class=\"card-title\">{{stock.name}}</h5>\n            <p class=\"card-text\">{{stock.currentPrice}}</p>\n            <p class=\"card-text\">{{stock.change}}</p>\n            <a href=\"#\" class=\"btn btn-primary\">View More</a>\n          </div>\n        </div>\n      </div>\n    </div>\n"
 
 /***/ }),
 
@@ -6408,7 +6408,7 @@ var CompanyListComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".header {\n    min-height: 40%;\n    background-image: url('banner.jpg');\n    text-align: center;\n    color: aliceblue;\n    font-size: 2rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcGFueS9jb21wYW55LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxnQkFBZ0I7SUFDaEIsb0NBQW9EO0lBQ3BELG1CQUFtQjtJQUNuQixpQkFBaUI7SUFDakIsZ0JBQWdCO0NBQ25CIiwiZmlsZSI6InNyYy9hcHAvY29tcGFueS9jb21wYW55LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaGVhZGVyIHtcbiAgICBtaW4taGVpZ2h0OiA0MCU7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKC4uLy4uLy4uL2Rpc3QvaW1nL2Jhbm5lci5qcGcpO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBjb2xvcjogYWxpY2VibHVlO1xuICAgIGZvbnQtc2l6ZTogMnJlbTtcbn0iXX0= */"
+module.exports = ".header {\n    min-height: 40%;\n    background-image: url('banner.png');\n    text-align: center;\n    color: aliceblue;\n    font-size: 2rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcGFueS9jb21wYW55LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxnQkFBZ0I7SUFDaEIsb0NBQW9EO0lBQ3BELG1CQUFtQjtJQUNuQixpQkFBaUI7SUFDakIsZ0JBQWdCO0NBQ25CIiwiZmlsZSI6InNyYy9hcHAvY29tcGFueS9jb21wYW55LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaGVhZGVyIHtcbiAgICBtaW4taGVpZ2h0OiA0MCU7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKC4uLy4uLy4uL2Rpc3QvaW1nL2Jhbm5lci5wbmcpO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBjb2xvcjogYWxpY2VibHVlO1xuICAgIGZvbnQtc2l6ZTogMnJlbTtcbn0iXX0= */"
 
 /***/ }),
 
@@ -6419,7 +6419,7 @@ module.exports = ".header {\n    min-height: 40%;\n    background-image: url('ba
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header\">\n  Stock Updates\n</div>\n\n<app-company-list></app-company-list>"
+module.exports = "<div class=\"header\">\n     | designed by Vexels\n  Stock Updates\n</div>\n\n<app-company-list></app-company-list>"
 
 /***/ }),
 
