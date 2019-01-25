@@ -52,12 +52,13 @@ If the above statement is confusing  I have created this documentation to  help 
 If you dont want to setup the pipeline right now and would like to go live with the application quicly by hosting it on PCF , follow the simple CF commands below:
 
 
-Login to CF.
-`cf login `
-Proviode your credentials as prompted.
-Provide your Endpoint name.
-Enter your SPACE as prompted my the CLI 
-Enter the cf push command
+* Login to CF.
+ `cf login `
+* Proviode your credentials as prompted.
+* Provide your Endpoint name.
+* Enter your SPACE as prompted my the CLI 
+* Enter the cf push command
+
 
 ` cf push app-name
 `
