@@ -1,7 +1,12 @@
 image: node
 
 stages:
+  - build
   - deploy
+  
+build : 
+    npm run build
+
 
 
 deploy:
