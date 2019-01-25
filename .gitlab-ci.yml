@@ -8,6 +8,7 @@ stages:
 build:
   stage: build
   script: npm start
+  
 
 test: 
   stage: test
