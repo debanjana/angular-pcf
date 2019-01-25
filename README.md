@@ -43,6 +43,11 @@ Run the following command to run tests
 
 ` ng test`
 
+Remember to run prod build before you push to Cloud Foundry 
+
+
+`npm run build -prod`
+
 **Pipeline**
 ---------------------------------------------------------------------------------
 
