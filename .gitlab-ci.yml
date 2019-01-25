@@ -1,8 +1,7 @@
 image: node
 
 stages:
-  # - build
-  # - test
+  - build
   - production
 
 build:
