@@ -76,15 +76,21 @@ applications:
 
 
 
+
+
+
 Things to note:
+
+---------------------------------------------
 I am facing a techinical issue with the my PCF's Disk Quota. 
 Since this is a node application , when I build the app , node_modules file is created which is quite large in size.
 This tends to consume a lot of Disk Space and causes the rest of the pipeline steps to fail. 
  The error is as below: 
 
- Fetching changes...
-error: could not lock config file .git/config: Disk quota exceeded
-ERROR: Job failed: exit status 1
+>  Fetching changes...
+> error: could not lock config file .git/config: Disk quota exceeded
+> ERROR: Job failed: exit status 1
+
 
 
 
