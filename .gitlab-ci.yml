@@ -2,20 +2,18 @@ image: node
 
 stages:
   - build
-  - production
-
-build:
-  stage: build
-  script: npm run build
-
-
+  - test
+  - deploy
+  
+build: 
+    stage: build
+    script: npm run build
 test: 
-  stage: test
-  script : npm test
+    stage: test
+    script: ng test
 
-
-production:
-  stage: production
+deploy:
+  stage: deploy
   script:
   - curl --location "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar zx
   - ./cf login -u debanjana.maitra@gmail.com -p Ttsp1.1PCF -a api.run.pivotal.io -s master
