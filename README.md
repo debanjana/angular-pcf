@@ -17,19 +17,15 @@ git clone https://gitlab.com/debanjana.maitra/angular-pcf-demo.git
 
 Once the project is on your local system , do the following to run the application 
 
-`
-npm install 
+`npm install 
 
 npm start
-
 `
 
 Run the following command to run tests
 
 ` 
-
 ng test
-
 `
 
 **Pipeline**
