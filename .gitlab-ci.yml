@@ -8,9 +8,6 @@ stages:
 build:
   stage: build
   script: npm start
-  artifacts:
-    paths:
-      - dist/demo-0.0.1-SNAPSHOT.jar
 
 test: 
   stage: test
