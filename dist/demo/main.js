@@ -6246,7 +6246,7 @@ module.exports = ".body{\npadding-left: 3rem;\npadding-right: 3rem;\n}\n/*# sour
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<body class=\"body\">\n<app-company></app-company>\n</body>"
+module.exports = "<body class=\"body\">\n<!-- redirect to app component-->  \n\n<app-company></app-company>\n</body>"
 
 /***/ }),
 
@@ -6303,6 +6303,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _hello_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./hello.component */ "./src/app/hello.component.ts");
 /* harmony import */ var _company_company_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./company/company.component */ "./src/app/company/company.component.ts");
 /* harmony import */ var _company_list_company_list_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./company-list/company-list.component */ "./src/app/company-list/company-list.component.ts");
+/* harmony import */ var _company_details_company_details_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./company-details/company-details.component */ "./src/app/company-details/company-details.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6316,17 +6318,88 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"]],
-            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _hello_component__WEBPACK_IMPORTED_MODULE_4__["HelloComponent"], _company_company_component__WEBPACK_IMPORTED_MODULE_5__["CompanyComponent"], _company_list_company_list_component__WEBPACK_IMPORTED_MODULE_6__["CompanyListComponent"]],
+            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_router__WEBPACK_IMPORTED_MODULE_8__["RouterModule"], _angular_router__WEBPACK_IMPORTED_MODULE_8__["RouterModule"].forRoot([])],
+            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _hello_component__WEBPACK_IMPORTED_MODULE_4__["HelloComponent"], _company_company_component__WEBPACK_IMPORTED_MODULE_5__["CompanyComponent"], _company_list_company_list_component__WEBPACK_IMPORTED_MODULE_6__["CompanyListComponent"], _company_details_company_details_component__WEBPACK_IMPORTED_MODULE_7__["CompanyDetailsComponent"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/company-details/company-details.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/company-details/company-details.component.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBhbnktZGV0YWlscy9jb21wYW55LWRldGFpbHMuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/company-details/company-details.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/company-details/company-details.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  Company Details\n</p>\n{{company.name}}\n{{company.stock}}\n\n\n"
+
+/***/ }),
+
+/***/ "./src/app/company-details/company-details.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/company-details/company-details.component.ts ***!
+  \**************************************************************/
+/*! exports provided: CompanyDetailsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CompanyDetailsComponent", function() { return CompanyDetailsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var CompanyDetailsComponent = /** @class */ (function () {
+    function CompanyDetailsComponent(activatedRoute) {
+        this.activatedRoute = activatedRoute;
+    }
+    CompanyDetailsComponent.prototype.ngOnInit = function () {
+        // this.activatedRoute.params.subscribe(params => { this.id = params['id']; });
+        this.id = this.activatedRoute.snapshot.params['id'];
+        console.log("company in details", this.id);
+    };
+    CompanyDetailsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-company-details',
+            template: __webpack_require__(/*! ./company-details.component.html */ "./src/app/company-details/company-details.component.html"),
+            styles: [__webpack_require__(/*! ./company-details.component.css */ "./src/app/company-details/company-details.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]])
+    ], CompanyDetailsComponent);
+    return CompanyDetailsComponent;
 }());
 
 
@@ -6340,7 +6413,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".card-body {\n    background-color: beige;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcGFueS1saXN0L2NvbXBhbnktbGlzdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksd0JBQXdCO0NBQzNCIiwiZmlsZSI6InNyYy9hcHAvY29tcGFueS1saXN0L2NvbXBhbnktbGlzdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNhcmQtYm9keSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogYmVpZ2U7XG59Il19 */"
+module.exports = ".card-body {\n    background-color: beige;\n}\n\n.card {\n    margin: 1rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcGFueS1saXN0L2NvbXBhbnktbGlzdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksd0JBQXdCO0NBQzNCOztBQUVEO0lBQ0ksYUFBYTtDQUNoQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBhbnktbGlzdC9jb21wYW55LWxpc3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jYXJkLWJvZHkge1xuICAgIGJhY2tncm91bmQtY29sb3I6IGJlaWdlO1xufVxuXG4uY2FyZCB7XG4gICAgbWFyZ2luOiAxcmVtO1xufSJdfQ== */"
 
 /***/ }),
 
@@ -6351,7 +6424,7 @@ module.exports = ".card-body {\n    background-color: beige;\n}\n/*# sourceMappi
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n    <div class=\"row\">\n      <div class=\"col-sm-6\" *ngFor=\"let stock of stockData\" >\n        <div class=\"card\">\n          <div class=\"card-body\">\n            <h5 class=\"card-title\">{{stock.name}}</h5>\n            <p class=\"card-text\">{{stock.currentPrice}}</p>\n            <p class=\"card-text\">{{stock.change}}</p>\n            <a href=\"#\" class=\"btn btn-primary\">View More</a>\n          </div>\n        </div>\n      </div>\n    </div>\n"
+module.exports = "\n    <div class=\"row\">\n      <div class=\"col-sm-6\" *ngFor=\"let company of stockData\" >\n        <div class=\"card\">\n          <div class=\"card-body\">\n            <h5 class=\"card-title\">{{company.name}}</h5>\n            <p class=\"card-text\">{{company.id}}</p>\n            <p class=\"card-text\">{{company.currentPrice}}</p>\n            <p class=\"card-text\">{{company.change}}</p>\n            <a class=\"btn btn-primary\"  [routerLink]=\"['/details',company.id ]\">View More</a>\n          </div>\n        </div>\n      </div>\n    </div>\n"
 
 /***/ }),
 
@@ -6381,6 +6454,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var CompanyListComponent = /** @class */ (function () {
     function CompanyListComponent(companyStockService) {
         this.companyStockService = companyStockService;
+        // here CompanyStockService is the service injected as dependency
         this.stockData = [];
     }
     CompanyListComponent.prototype.ngOnInit = function () {
@@ -6408,7 +6482,7 @@ var CompanyListComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".header {\n    min-height: 40%;\n    background-image: url('banner.png');\n    text-align: center;\n    color: aliceblue;\n    font-size: 2rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcGFueS9jb21wYW55LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxnQkFBZ0I7SUFDaEIsb0NBQW9EO0lBQ3BELG1CQUFtQjtJQUNuQixpQkFBaUI7SUFDakIsZ0JBQWdCO0NBQ25CIiwiZmlsZSI6InNyYy9hcHAvY29tcGFueS9jb21wYW55LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaGVhZGVyIHtcbiAgICBtaW4taGVpZ2h0OiA0MCU7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKC4uLy4uLy4uL2Rpc3QvaW1nL2Jhbm5lci5wbmcpO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBjb2xvcjogYWxpY2VibHVlO1xuICAgIGZvbnQtc2l6ZTogMnJlbTtcbn0iXX0= */"
+module.exports = ".header {\n    min-height: 40%;\n    text-align: center;\n    color: blue;\n    font-size: 2rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcGFueS9jb21wYW55LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxnQkFBZ0I7SUFDaEIsbUJBQW1CO0lBQ25CLFlBQVk7SUFDWixnQkFBZ0I7Q0FDbkIiLCJmaWxlIjoic3JjL2FwcC9jb21wYW55L2NvbXBhbnkuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5oZWFkZXIge1xuICAgIG1pbi1oZWlnaHQ6IDQwJTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgY29sb3I6IGJsdWU7XG4gICAgZm9udC1zaXplOiAycmVtO1xufSJdfQ== */"
 
 /***/ }),
 
@@ -6419,7 +6493,7 @@ module.exports = ".header {\n    min-height: 40%;\n    background-image: url('ba
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header\">\n     | designed by Vexels\n  Stock Updates\n</div>\n\n<app-company-list></app-company-list>"
+module.exports = "<div class=\"header\">\n <h1>Stock Updates </h1>\n</div>\n\n<app-company-list></app-company-list>"
 
 /***/ }),
 
@@ -6434,6 +6508,9 @@ module.exports = "<div class=\"header\">\n     | designed by Vexels\n  Stock Upd
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CompanyComponent", function() { return CompanyComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* this is the main component that whose UI loads after being redirected from app.component.ts
+It has a Company list as child component
+*/
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6443,7 +6520,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 var CompanyComponent = /** @class */ (function () {
     function CompanyComponent() {
-        this.name = 'Angular';
+        this.name = 'Company Stock';
     }
     CompanyComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -6512,6 +6589,11 @@ var HelloComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CompanyStockService", function() { return CompanyStockService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/*
+This is the service.
+This has @injectable decorator because it will be injected to the Company List component
+This is the new way of Dependency Injection from Angular 6 onwards
+*/
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6524,19 +6606,27 @@ var CompanyStockService = /** @class */ (function () {
         this.testVal = "test val";
         this.realStockData = [];
         this.mockStockData = [
-            { "name": "Vmware",
+            {
+                "id": 1,
+                "name": "Vmware",
                 "currentPrice": 170,
                 "change": -3.74
             },
-            { "name": "Google",
+            {
+                "id": 2,
+                "name": "Google",
                 "currentPrice": 1071,
                 "change": -11.74
             },
-            { "name": "Tortoise Global",
+            {
+                "id": 3,
+                "name": "Tortoise Global",
                 "currentPrice": 150,
                 "change": +0.13
             },
-            { "name": "State farm",
+            {
+                "id": 4,
+                "name": "State Farm",
                 "currentPrice": 200,
                 "change": +8.74
             }

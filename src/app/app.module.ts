@@ -6,11 +6,14 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { CompanyComponent } from './company/company.component';
 import { CompanyListComponent } from './company-list/company-list.component';
+import { CompanyDetailsComponent } from './company-details/company-details.component';
+import { RouterModule } from '@angular/router';
+import { RoutingModule } from './app.routing.module';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, CompanyComponent, CompanyListComponent ],
+  imports:      [ BrowserModule, FormsModule, RouterModule, RoutingModule, RouterModule.forRoot([]) ],
+  declarations: [ AppComponent, HelloComponent, CompanyComponent, CompanyListComponent, CompanyDetailsComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
