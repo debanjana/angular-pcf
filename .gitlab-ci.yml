@@ -10,7 +10,7 @@ build:
     script: npm run build
 test: 
     stage: test
-    script: ng test
+    script: npm test
 
 deploy:
   stage: deploy
