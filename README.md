@@ -1,7 +1,7 @@
 **About**
 --------------------------------------------------------------------------------
 
-Angular-PCF-Demo is a project to demonstrate Angular features and utilize *Gitlab's pipeline* along with *Cloud Founday*  to Build , Test and Deploy an
+Angular-PCF is a project to demonstrate Angular features and utilize *Gitlab's pipeline* along with *Cloud Founday*  to Build , Test and Deploy an
 Angular project.
 
 
